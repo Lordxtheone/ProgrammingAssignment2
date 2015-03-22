@@ -16,7 +16,7 @@ makeCacheMatrix <- function(x = matrix ()) {
        getmean = getmean)
 }
 
-
+# the following fuction will calculate the inverse of the square Matrix
 cacheSolve <- function(x = matrix(),...) {
         
     r <- x$getmean()
@@ -25,7 +25,7 @@ cacheSolve <- function(x = matrix(),...) {
       message("getting cached data")
       return(r)
     }
-  
+  # x return the mean 
     matrix <- x$get()
     r <- solve(matrix, ...)
     x$setmean(r)
